@@ -12,7 +12,7 @@ import courseProgressRoute from "./routes/courseProgress.route.js"
 dotenv.config();
 connectDB();
 const app = express();
-const PORT = process.env.PORT||3000;
+const PORT = 8000;
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -34,13 +34,7 @@ app.use("/api/v1/courseprogress", courseProgressRoute)
 
 
 
-//cheking server status 
-// app.get("/", (req,res)=>{
-//     return res.status(200).json({
-//         message:` server listen at  ${PORT}`,
-//         success:true
-//     })
-// });
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
