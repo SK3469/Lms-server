@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin: "https://lms-ui-bcym.onrender.com", // ✅ Allow your frontend domain
+    origin: ["https://lms-ui-bcym.onrender.com","http://localhost:5173"],// ✅ Allow your frontend domain
     credentials: true, // ✅ Allow sending cookies
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
