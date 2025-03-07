@@ -16,12 +16,13 @@ const PORT = 8000;
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors(
-    {
-        origin: "*",
-        credentials: true,
-    }
-))
+app.use(cors({
+    origin: "https://lms-ui-bcym.onrender.com", // ✅ Allow your frontend domain
+    credentials: true, // ✅ Allow sending cookies
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+}));
+
 
 
 //Routes
