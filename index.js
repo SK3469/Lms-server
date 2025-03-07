@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors(
     {
-        origin: "https://lms-ui-bcym.onrender.com",
+        origin: "*",
         credentials: true,
     }
 ))
